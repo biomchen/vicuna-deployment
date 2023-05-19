@@ -79,10 +79,15 @@ conda create -n vicuna python=3.9
 conda activate vicuna
 
 # 9. install Pytorch 2.0.1 with cuda 11.7 with some other necessory packages
+conda install -c anaconda pip
 conda install -c conda-forge tqdm
 conda install -c conda-forge huggingface_hub  # might need to login into the huggingface with access token
 conda install -c huggingface transformers
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+
+# you should change it to your home directory
+/home/cm/miniconda3/envs/vicuna/bin/pip safetensors protobuf sentencepiece
+/home/cm/miniconda3/envs/vicuna/bin/pip git+https://github.com/huggingface/transformers
 
 # 10. git clone and install the vicuna model
 git clone https://github.com/thisserand/FastChat.git

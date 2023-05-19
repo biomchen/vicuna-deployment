@@ -13,7 +13,6 @@
 # 10. git clone the vicuna repo
 # 11. git clone GPTQ-for-LLaMa
 # 12. download the vicuna-13b-GPTQ-4bit-128g from huggingface
-###
 
 # 1. verify your gpu is cuda enable check
 lspci | grep -i nvidia

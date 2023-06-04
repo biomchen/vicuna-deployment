@@ -86,8 +86,8 @@ conda install -c huggingface transformers
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 
 # you should change it to your home directory
-/home/cm/miniconda3/envs/vicuna/bin/pip safetensors protobuf sentencepiece
-/home/cm/miniconda3/envs/vicuna/bin/pip git+https://github.com/huggingface/transformers
+/home/[your account]/miniconda3/envs/vicuna/bin/pip safetensors protobuf sentencepiece
+/home/[your account]/miniconda3/envs/vicuna/bin/pip git+https://github.com/huggingface/transformers
 
 # 10. git clone and install the vicuna model
 git clone https://github.com/thisserand/FastChat.git
@@ -105,3 +105,6 @@ python setup_cuda.py install
 # the original codes has bug, the 'cursor' might return None, used updated version solve the problem.
 cd ../..
 python download-model_updated.py anon8231489123/vicuna-13b-GPTQ-4bit-128g
+
+# 13. deploy
+python -m fastchat.serve.cli --model-name anon8231489123/vicuna-13b-GPTQ-4bit-128g --wbits 4 --groupsize 128

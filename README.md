@@ -13,7 +13,6 @@ https://github.com/oobabooga/GPTQ-for-LLaMa
 [GPTQ](https://arxiv.org/abs/2210.17323) is the Post-Training Quantization for Generative Pre-trained Transformers, a SOTA one-shot weight quantization method.
 
 ### Steps
-
 #### 1. verify your gpu is cuda enable check
 ```sh
 lspci | grep -i nvidia
@@ -27,15 +26,15 @@ sudo rm /etc/apt/sources.list.d/cuda*
 sudo apt-get autoremove && sudo apt-get autoclean
 sudo rm -rf /usr/local/cuda*
 ```
-update the system
+* update the system
 ```sh
 sudo apt-get update && sudo apt-get upgrade -y
 ```
-install other import packages
+* install other import packages
 ```sh
 sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
 ```
-get the PPA repository driver
+* get the PPA repository driver
 ```sh
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
@@ -53,7 +52,7 @@ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
 sudo apt-get update
 ```
-install CUDA-11.7
+* install CUDA-11.7
 ```sh
 sudo apt install cuda-11-7
 ```
@@ -70,7 +69,7 @@ CUDNN_TAR_FILE="cudnn-linux-x86_64-8.5.0.96_cuda11-archive.tar.xz"
 wget https://developer.download.nvidia.com/compute/redist/cudnn/v8.5.0/local_installers/11.7/cudnn-linux-x86_64-8.5.0.96_cuda11-archive.tar.xz
 tar -xzvf ${CUDNN_TAR_FILE}
 ```
-copy the following files into the cuda toolkit directory.
+* copy the following files into the cuda toolkit directory.
 ```sh
 sudo cp -P cuda/include/cudnn.h /usr/local/cuda-11.7/include
 sudo cp -P cuda/lib/libcudnn* /usr/local/cuda-11.7/lib64/
@@ -101,7 +100,7 @@ conda install -c conda-forge huggingface_hub  # might need to login into the hug
 conda install -c huggingface transformers
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 ```
-# you should change it to your home directory
+* you should change it to your home directory
 ```sh
 /home/[your account]/miniconda3/envs/vicuna/bin/pip safetensors protobuf sentencepiece
 /home/[your account]/miniconda3/envs/vicuna/bin/pip git+https://github.com/huggingface/transformers

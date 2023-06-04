@@ -121,7 +121,7 @@ cd GPTQ-for-LLaMa
 python setup_cuda.py install
 ```
 #### 12. download the GPTQ-quantized Vicuna model from huggingface
-* the original codes has bug, the 'cursor' might return None, used updated version solve the problem.
+* the original codes has a bug, the 'cursor' might return None, used updated version solve the problem.
 ```sh
 cd ../..
 python download-model_updated.py anon8231489123/vicuna-13b-GPTQ-4bit-128g

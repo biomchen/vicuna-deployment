@@ -1,6 +1,6 @@
 #### About 
 
-# Vicuna-finetune-deployment
+# Vicuna-deployment
 
 This is the rep of detailed steps about the deployment of the vicuna model using `fastchat`.
 

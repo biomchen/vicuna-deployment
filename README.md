@@ -2,7 +2,7 @@
 
 # Vicuna-deployment
 
-This is the rep of detailed steps about the deployment of the vicuna model using `fastchat`.
+A repo of detailed steps about the deployment of the Vicuna using `fastchat`.
 
 ### Vicuna model  
 https://github.com/thisserand/FastChat

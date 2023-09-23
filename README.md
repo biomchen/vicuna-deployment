@@ -2,7 +2,7 @@
 
 # Vicuna-finetune-deployment
 
-This is the rep of detailed steps about the deployment of the vicuna model and its finetuning steps.
+This is the rep of detailed steps about the deployment of the vicuna model using `fastchat`.
 
 ### Vicuna model  
 https://github.com/thisserand/FastChat
